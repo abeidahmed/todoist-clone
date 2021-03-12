@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout "slate"
+
   def create
     user = User.new(user_params)
 
