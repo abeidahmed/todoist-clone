@@ -16,15 +16,15 @@
   input[type="submit"] {
     @apply transition duration-150 ease-in-out;
 
-    &:focus:not([data-focus-visible-added]) {
-      outline: none;
-    }
-
     &:disabled,
     &[disabled] {
       opacity: 0.5;
       cursor: default;
       pointer-events: none;
+    }
+
+    &:focus:not([data-focus-visible-added]) {
+      outline: none;
     }
   }
 }
