@@ -39,6 +39,7 @@ RSpec.configure do |config|
 
   config.include Features::SessionsHelper
   config.include Requests::SessionsHelper
+  config.include JsonHelper
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
