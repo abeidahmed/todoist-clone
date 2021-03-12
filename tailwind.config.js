@@ -2,9 +2,6 @@ module.exports = {
   purge: ["./app/views/**/*.html.erb"],
   darkMode: false,
   theme: {
-    extend: {},
-  },
-  variants: {
     extend: {
       colors: {
         brand: {
@@ -13,6 +10,9 @@ module.exports = {
         },
       },
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
 };
