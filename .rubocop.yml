@@ -181,7 +181,7 @@ Rails/DefaultScope:
   Enabled: true
 
 Rails/FilePath:
-  EnforcedStyle: slashes
+  Enabled: false
 
 Rails/FindById:
   StyleGuide: 'https://rails.rubystyle.guide/#find'
