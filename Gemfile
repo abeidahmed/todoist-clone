@@ -27,8 +27,11 @@ group :development, :test do
 end
 
 group :development do
+  gem "guard-rspec", require: false
   gem "web-console", ">= 4.1.0"
   gem "rack-mini-profiler", "~> 2.0"
+  gem "better_errors", "~> 2.8", ">= 2.8.3"
+  gem "binding_of_caller", "~> 1.0"
   gem "listen", "~> 3.3"
   gem "spring"
 end
