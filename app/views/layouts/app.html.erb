@@ -11,8 +11,13 @@
     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body class="min-h-screen text-sm text-gray-900">
+  <body class="min-h-screen bg-white text-sm text-gray-900">
     <%= render "headers/app_header" %>
-    <%= yield %>
+    <div class="flex">
+      <%= render "sidebars/app_sidebar" %>
+      <main class="flex-1">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
