@@ -9,7 +9,7 @@ gem "puma", "~> 5.0"
 gem "sass-rails", ">= 6"
 gem "webpacker", "~> 5.0"
 gem "bcrypt", "~> 3.1.7"
-gem "turbo-rails"
+gem "turbo-rails", git: "https://github.com/hotwired/turbo-rails.git"
 # gem "redis", "~> 4.0"
 # gem "image_processing", "~> 1.2"
 

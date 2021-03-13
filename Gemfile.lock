@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/hotwired/turbo-rails.git
+  revision: fec33d9bc767aec612b283620d2a74e78c1f90ae
+  specs:
+    turbo-rails (0.5.9)
+      rails (>= 6.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -254,8 +261,6 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    turbo-rails (0.5.7)
-      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)
@@ -301,7 +306,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   shoulda-matchers (~> 4.4, >= 4.4.1)
   spring
-  turbo-rails
+  turbo-rails!
   tzinfo-data
   web-console (>= 4.1.0)
   webpacker (~> 5.0)

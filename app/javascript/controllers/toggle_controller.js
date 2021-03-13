@@ -8,11 +8,11 @@ export default class extends ApplicationController {
   };
 
   connect() {
-    useClickOutside(this);
-
     if (this.pageIsTurboPreview) {
       this.hide();
     }
+
+    useClickOutside(this);
   }
 
   toggle() {
