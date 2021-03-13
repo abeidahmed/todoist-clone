@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     respond_to do |format|
       if auth.authenticated?
         sign_in(auth.user)
+        format.html { redirect_to root_path }
       else
         format.turbo_stream
         format.html { render :new }

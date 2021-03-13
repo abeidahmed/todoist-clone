@@ -9,10 +9,10 @@ RSpec.describe "Sessions", type: :request do
       expect(signed_cookie[:auth_token]).to eq(user.auth_token)
     end
 
-    it "returns an error if the request is invalid" do
-      post sessions_path, params: { email_address: "", password: "helloworld" }
+    it "does not store the cookie if request is invalid" do
+      post sessions_path, params: { email_address: "hello@ex.com", password: "secret" }
 
-      expect(json.dig(:errors, :invalid)).to be_present
+      expect(signed_cookie[:auth_token]).to be_blank
     end
   end
 end

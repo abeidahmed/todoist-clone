@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         sign_in(@user)
+        format.html { redirect_to root_path }
       else
         format.turbo_stream
         format.html { render :new }
