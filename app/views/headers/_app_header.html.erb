@@ -1,10 +1,10 @@
 <header class="bg-brand px-4 sm:px-6 lg:px-10">
   <div class="flex items-center justify-between h-11">
-    <div class="flex items-center space-x-2">
-      <button type="button" class="-ml-1 p-1 rounded hover:bg-white hover:bg-opacity-25 text-white">
+    <div class="flex items-center">
+      <button data-action="sidebar#toggle" type="button" class="-ml-1 p-1 rounded hover:bg-white hover:bg-opacity-25 text-white lg:hidden">
         <%= feather_icon "menu" %>
       </button>
-      <%= link_to app_today_path, class: "p-1 rounded hover:bg-white hover:bg-opacity-25 text-white" do %>
+      <%= link_to app_today_path, class: "ml-2 p-1 rounded hover:bg-white hover:bg-opacity-25 text-white lg:-ml-1" do %>
         <%= feather_icon "home" %>
       <% end %>
     </div>

@@ -11,7 +11,7 @@
     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body class="min-h-screen bg-white text-sm text-gray-900">
+  <body data-controller="sidebar" class="min-h-screen bg-white text-sm text-gray-900">
     <%= render "headers/app_header" %>
     <div class="flex">
       <%= render "sidebars/app_sidebar" %>
