@@ -1,21 +1,21 @@
 <%= form_with model: user, id: dom_id(user), class: "mt-8 space-y-4" do |form| %>
   <div>
     <%= form.label :full_name, "Your name", class: "font-semibold" %>
-    <%= form.text_field :full_name, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400" %>
+    <%= form.text_field :full_name, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400", required: true %>
     <p class="text-brand-600 font-semibold mt-1">
       <%= user.errors.full_messages_for(:full_name).first %>
     </p>
   </div>
   <div>
     <%= form.label :email_address, class: "font-semibold" %>
-    <%= form.email_field :email_address, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400" %>
+    <%= form.email_field :email_address, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400", required: true %>
     <p class="text-brand-600 font-semibold mt-1">
       <%= user.errors.full_messages_for(:email_address).first %>
     </p>
   </div>
   <div>
     <%= form.label :password, class: "font-semibold" %>
-    <%= form.password_field :password, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400" %>
+    <%= form.password_field :password, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400", required: true %>
     <p class="text-gray-600 text-xs mt-1">Your password must be at least 8 characters long. Avoid common words or patterns.</p>
     <p class="text-brand-600 font-semibold mt-1">
       <%= user.errors.full_messages_for(:password).first %>

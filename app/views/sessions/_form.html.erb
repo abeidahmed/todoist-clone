@@ -1,11 +1,11 @@
 <%= form_with url: sessions_path, id: "sign-in-form", class: "mt-8 space-y-4" do |form| %>
   <div>
     <%= form.label :email_address, class: "font-semibold" %>
-    <%= form.email_field :email_address, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400" %>
+    <%= form.email_field :email_address, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400", required: true %>
   </div>
   <div>
     <%= form.label :password, class: "font-semibold" %>
-    <%= form.password_field :password, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400" %>
+    <%= form.password_field :password, class: "block w-full rounded py-1.5 px-3 mt-1 text-sm leading-5 border-gray-300 focus:ring-gray-400 focus:border-gray-400", required: true %>
     <% if local_assigns[:error] %>
       <p class="mt-1 text-brand-600 font-semibold"><%= error %></p>
     <% end %>
