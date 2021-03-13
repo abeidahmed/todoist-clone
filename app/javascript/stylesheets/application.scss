@@ -3,6 +3,10 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+  [hidden][hidden] {
+    display: none !important;
+  }
+
   a {
     @apply text-brand;
 
