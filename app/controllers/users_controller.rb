@@ -1,13 +1,21 @@
 class UsersController < ApplicationController
   layout "slate"
 
-  def create
-    user = User.new(user_params)
+  def new
+    @user = User.new
+  end
 
-    if user.save
-      sign_in(user)
-    else
-      render json: { errors: user.errors }, status: :unprocessable_entity
+  def create
+    @user = User.new(user_params)
+
+    respond_to do |format|
+      if @user.save
+        sign_in(@user)
+      else
+        format.turbo_stream
+        format.html { render :new }
+        format.json { render json: { errors: @user.errors }, status: :unprocessable_entity }
+      end
     end
   end
 
